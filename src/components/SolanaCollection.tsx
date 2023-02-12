@@ -51,6 +51,7 @@ function SolanaCollection(collection: Collection) {
                     <Stack direction="row" spacing={9} sx={{margin: '20px 0 20px 20px'}}>
                         <Avatar alt="Collection" src={data.image} sx={{ width: 56, height: 56 }}/>
                         <SolanaDetailBox title={data.name} 
+                                            symbolToLink={collection.symbol}
                                             subtitle={
                                                 data.mintDateDiffFromNow < 1
                                                 ? `less than one month`
