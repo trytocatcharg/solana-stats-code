@@ -10,6 +10,7 @@ import TextField from '@mui/material/TextField';
 import { Collection } from './models/collection.model';
 import { useCollection } from './context/collectionContext';
 import { CollectionActionEnum } from './state/collectionActionEnum';
+import Link from '@mui/material/Link';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -64,7 +65,7 @@ export default function SearchAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Solana
+           <Link href="https://magiceden.io/" sx={{color: '#fff'}} target={'_blank'}>Solana NFT</Link>
           </Typography>
           <Search>
             <SearchIconWrapper>
