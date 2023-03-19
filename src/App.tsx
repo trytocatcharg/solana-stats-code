@@ -4,6 +4,7 @@ import SearchAppBar from './AppBar';
 import Loading from './components/Loading';
 import SolanaCollection from './components/SolanaCollection';
 import SolanaEmpty from './components/SolanaEmpty';
+import SolanaListing from './components/SolanaListing';
 import { useCollection } from './context/collectionContext';
 import { collectionReducer } from './state/collectionReducer';
 
@@ -17,7 +18,11 @@ function App() {
     <>
       <SearchAppBar dispatch={dispatch} />
       {
-        (collection && dataCollection.list) && <SolanaCollection {...collection} />
+        (collection && dataCollection.list) &&
+          <>
+            <SolanaCollection {...collection} />
+            <SolanaListing {...collection} />
+          </>
       }
       {
         (!collection?.symbol && dataCollection.list) && <SolanaEmpty />
